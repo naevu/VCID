@@ -1,0 +1,31 @@
+Hi Saajanbhatia
+
+I should have a webapp for my football team the users should be able to login with the email address. Important is that you can set dates for training, tournament or match. The users should be able to log in or log out. There should be coaches, co-trainers, players that you can authorize. Is this possible? The team is called SC Phoenix and I will send you the logo.
+
+These are the requirements:
+ur web application provides the user with functionality that you can define yourself within a given framework. It must meet the following requirements:
+there is an interactive web interface with which the user can make entries, trigger processing or actions, and view results.
+access to the web application must be controlled by user accounts with passwords. new users must register with a unique username and email account.
+the application must store, in addition to user accounts, data specific to the application (example: recipes, comments, employees, projects, etc...). They are stored in a relational database.
+
+there is a separate business logic. This may include calculations, actions, checks of inputs, or just the collection and display of data.
+there must be (at least) read access to selected data of the web application via a RESTful web API in addition to the interactive web interface. This applies to a specific content of the respective web application (i.e. not only the user data)
+
+The following technologies are to be used:
+Database system: MySQL, MariaDB or PostgreSQL
+Programming language: Python version 3.6 or higher
+Web framework: Flask, various Flask extensions
+
+Brief description of the functionality and operation of the web application ('User Manual').
+List of objectives and key requirements
+Description of the architecture (diagrams, each with explanatory text),
+in detail:
+o Data model of the web application as ERD or class diagram, with brief explanatory text o Processes in the web application as activity, state or sequence diagram with brief
+description
+Short documentation of the API interface
+
+Is something like that possible?
+
+Thank you!
+Best regards
+Naveen

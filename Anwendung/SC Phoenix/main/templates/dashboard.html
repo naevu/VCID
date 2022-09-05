@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% block home_active %}active-nav{% endblock home_active %}
+
+{% block style %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+{% endblock style %}
+
+{% block content %}
+    <div class="container">
+        <div class="name-board">
+            <h3>Welcome, {{ userInfo.username }}</h3>
+        </div>
+
+        <div class="event-container">
+                <h3>Available Events</h3>
+                <table class="table">
+                    <thead>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Type</th>
+                        <th>Event Date</th>
+                        <th>Posted On</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        {% for event in events %}
+                            <tr>
+                                <td>{{ event.event_name }}</td>
+                                <td>{{ event.event_location }}</td>
+                                <td>{{ event.event_type }}</td>
+                                <td>{{ event.event_date }}</td>
+                                <td>{{ event.event_post_date }}</td>
+                                <td>
+                                    {% if not event.id in events_joined %}
+                                    <a style="color: green;" href="/join_event/{{ event.id }}">Join Event</a>
+                                    {% else %}
+                                    <a style="color: red;" href="/leave_event/{{ event.id }}">Leave Event</a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
