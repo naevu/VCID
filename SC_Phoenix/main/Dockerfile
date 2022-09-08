@@ -11,7 +11,7 @@ RUN apt-get update && \
 
 COPY ./static ./static
 COPY ./templates ./templates
-COPY ../run.py .
+COPY /home/naveen_n/VCID/SC_Phoenix/run.py .
 COPY ./requirements.txt .
 
 RUN pip install -r requirements.txt
