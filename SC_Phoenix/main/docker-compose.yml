@@ -22,7 +22,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 
     volumes:
-      - ./db/sc-phoenix.db:/docker-entrypoint-initdb.d/sc-phoenix.db
+      - ./main/db/sc-phoenix.db:/docker-entrypoint-initdb.d/sc-phoenix.db
     cap_add:
       - SYS_NICE  # CAP_SYS_NICE
   nginx:
