@@ -1,0 +1,22 @@
+version: "3"
+services:
+  web_server:
+    container_name: nginx
+    build: ./nginx
+    networks:
+      - internal
+    ports:
+      - 80:80
+    depends_on:
+      - app
+    restart: always
+  app:
+    build: .
+    expose:
+      - 5000
+    networks:
+      - internal
+    restart: always
+networks:
+    internal:
+        driver: bridge
