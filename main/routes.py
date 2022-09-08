@@ -86,7 +86,6 @@ def index():
 
     print(session)
 
-    # CODE TO GET THE EVENT ID's THE CURRENT USER HAS JOINED
     joined_events_by_user = []
     for event in events:
         for participant in event.participant:
