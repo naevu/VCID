@@ -11,7 +11,7 @@ RUN apt-get update && \
 
 COPY ./static ./static
 COPY ./templates ./templates
-COPY ./app.py .
+COPY ./run.py .
 COPY ./requirements.txt .
 
 RUN pip install -r requirements.txt
