@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Update {{ user.username }}{% endblock title %}
+
+{% block style %}
+{{ super() }}
+<style>
+    .event_manager{
+        margin-top: 40px;
+    }
+    input, select{
+        margin-top: 10px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    form{
+        width: 50%;
+    }
+
+</style>
+{% endblock style %}
+
+{% block content %}
+    <div class="container">
+        <div class="event_manager">
+            <div class="event_creator">
+            <h3>Update {{ user.username }}</h3>
+            <form action="/update_user/{{ user.id }}" method="POST">
+                <input type="email" name="email" placeholder="Email Address" value="{{ user.email }}" required><br>
+                <input type="text" name="username" placeholder="Username" value="{{ user.username }}" required><br>
+                <input type="password" name="password" placeholder="Password" value=""><br>
+                <small>Add Password if you want to change it</small><br>
+                <select name="user_role" required>
+                    <option value=""></option>
+                    {% for role in userRoles %}
+                        <option value="{{ role }}" {% if role == user.role.upper() %}SELECTED{% endif %}>{{ role }}</option>
+                    {% endfor %}
+                </select><br>
+                <input type="submit" value="Add User">
+            </form>
+        </div>
+    </div>
+{% endblock content %}

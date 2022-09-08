@@ -1,0 +1,22 @@
+.form{
+    margin-top: 50px;
+    width: 600px;
+    padding: 60px 30px 60px 30px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+}
+.form h3{
+    margin-bottom: 15px;;
+}
+.form input, .form, select{
+    margin-left: auto;
+    margin-right: auto;
+}
+.form input, select{
+    display: block;
+    margin-bottom: 10px;
+    width: 80%;
+    padding: 7px   ;
+}
