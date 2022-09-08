@@ -1,0 +1,30 @@
+.event_manager{
+    margin-top: 30px;
+}
+
+.event_creator input, .event_creator select{
+    width: 15%;
+    padding: 5px;
+    height: 50px;
+}
+
+.event_container{
+    margin-top: 30px;
+}
+
+table{
+    width: 100%;
+}
+
+tr{
+    height: 30px;
+}
+
+tr td:first-child{
+    width: 200px;
+    text-align: center;
+}
+
+tr td:last-child{
+    width: auto;
+}
