@@ -2,7 +2,7 @@
 
 Run the following commands to get the web application running with Docker and Nginx.
 
-* sudo apt install git-hub
+`sudo apt install git-hub`
 * sudo apt install docker
 * sudo apt install docker-compose
 * sudo git clone https://github.com/naevu/VCID.git
