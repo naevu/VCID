@@ -13,7 +13,7 @@ sudo docker-compose up -d
 ```
 After that everything is running and ready.
 
-The credential for the web application is:
+The credential for the web application are:
 ```
 User: admin1
 Password: 123
